@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PvPch Клан</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <!-- Анимация струн -->
+  <div class="animated-strings">
+    <div class="string string-left-1"></div>
+    <div class="string string-left-2"></div>
+    <div class="string string-right-1"></div>
+    <div class="string string-right-2"></div>
+  </div>
+
+  <!-- Меню в правом верхнем углу -->
+  <nav class="menu">
+    <button id="menu-toggle" aria-label="Открыть меню">☰</button>
+    <div id="menu-content" class="menu-content">
+      <h2>О клане PvPch</h2>
+      <p>Клан PvPch - 10.5 лет он был основан на сервере PlayMine.</p>
+      <p>Цель: доминировать в PvP и поддерживать дружескую атмосферу.</p>
+      <p>Наши планы: улучшать навыки, проводить тренировки и расширять состав.</p>
+      <button id="close-menu">Закрыть</button>
+    </div>
+  </nav>
+
+  <!-- Главный контейнер -->
+  <div class="container">
+    <h1 class="logo-text">PvPch</h1>
+
+    <div class="button-grid">
+      <button class="minecraft-button" data-popup="moderation">Администрация</button>
+      <button class="minecraft-button" data-popup="administration">Топ</button>
+      <button class="minecraft-button" data-popup="rules">Правила</button>
+      <button class="minecraft-button" data-popup="builders">Строители</button>
+      <button class="minecraft-button" data-popup="pvp">PvP Бойцы</button>
+      <button class="minecraft-button" data-popup="telegram">Telegram</button>
+    </div>
+
+    <!-- Социальные иконки -->
+    <div class="social-icons">
+      <a href="https://t.me/pvpch" target="_blank" rel="noopener noreferrer">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" />
+      </a>
+    </div>
+  </div>
+
+  <!-- Попапы -->
+  <div id="moderation" class="popup">
+    <div class="popup-content">
+      <p>Администрация:</p>
+        <p>@MORIARTY7474</p>
+        <p>@Builderlll</p>
+        <p>@m3moriesx</p>
+        <p>@MAKSSPRO2001</p>
+        <p>Гл.Модератор:</p>
+        <p>@kyb_player</p>
+        <p>@Kirilleazy</p>
+        <p>@Ichigo_Kurasagi_n1</p>
+        <p>Ст.Модератор:</p>
+        <p>@DIKIYF2010</p>
+        <p>@ReneseLotes</p>
+        <p>Мл.Модератор:</p>
+        <p>@NEGROMAN22</p>
+      <button class="close-popup">Закрыть</button>
+    </div>
+  </div>
+
+  <div id="administration" class="popup">
+    <div class="popup-content">
+      <p>Топ игроки:</p>
+        <p>Maxsovmaxsov</p>
+        <p>KARAKURT_</p>
+        <p>VinkNN</p>
+        <p>Myxa</p>
+      <button class="close-popup">Закрыть</button>
+    </div>
+  </div>
+
+  <div id="rules" class="popup">
+    <div class="popup-content">
+      <p>Правила клана:</p>
+        <p>1. Запрещаются моменталки между своими и на территории клан хома.</p>
+        <p>2. Запрещается оскорблять друг друга и родных.</p>
+        <p>3. Запрещается пвп без разрешения если пвп включено в клане.</p>
+        <p>4. Взаимопомощь друг другу.</p>
+        <p>5. На просьбу главы клана отвечать и по случаю помогать.</p>
+        <p>6. В рг клан хома игрокам запрещено:</p>
+        <p>6.1. Разрешено модерации клана.</p>
+        <p>6.2. Для игроков отдельный рг общага.</p>
+        <p>7. Запрещено строить непристойные постройки и гриф клана хома и т.д.</p>
+        <p>8. Все вопросы к модерации клана или главе по случаю писать в Telegram или спрашивать лично.</p>
+        <p>9. Не просить донат если вам сказали, что доната нет.</p>
+      <button class="close-popup">Закрыть</button>
+    </div>
+  </div>
+
+  <div id="builders" class="popup">
+    <div class="popup-content">
+      <h3>Строители</h3>
+      <p>KARAKURT_</p>
+      <p>MAKSSPRO</p>
+      <button class="close-popup">Закрыть</button>
+    </div>
+  </div>
+
+  <div id="pvp" class="popup">
+    <div class="popup-content">
+      <h3>PvP Бойцы</h3>
+      <p>VinkNN</p>
+      <p>qWertzxq</p>
+      <button class="close-popup">Закрыть</button>
+    </div>
+  </div>
+
+  <div id="telegram" class="popup">
+    <div class="popup-content">
+      <h3>Telegram</h3>
+      <p>Присоединяйся к нашему Telegram ,беседе!</p>
+      <a href="https://t.me/pvpch" target="_blank" rel="noopener noreferrer">https://t.me/pvpch</a>
+      <button class="close-popup">Закрыть</button>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+
+/* Базовые стили */
+body {
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+  background-color: #111;
+  color: #fff;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Анимация струн */
+.animated-strings {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.animated-strings .string {
+  position: absolute;
+  width: 6px;
+  height: 150%;
+  opacity: 0.7;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.string-left-1 {
+  left: 10%;
+  background: linear-gradient(to bottom, #00ffff, #ff00ff);
+  animation-name: moveDown;
+  animation-duration: 5s;
+}
+
+.string-left-2 {
+  left: 16%;
+  width: 4px;
+  background: linear-gradient(to bottom, #ffff00, #ff6600);
+  animation-name: moveDown;
+  animation-duration: 7s;
+  animation-delay: 2s;
+}
+
+.string-right-1 {
+  right: 10%;
+  background: linear-gradient(to bottom, #ff0077, #7700ff);
+  animation-name: moveUp;
+  animation-duration: 6s;
+  animation-delay: 1s;
+}
+
+.string-right-2 {
+  right: 16%;
+  width: 4px;
+  background: linear-gradient(to bottom, #00ff99, #0099ff);
+  animation-name: moveUp;
+  animation-duration: 8s;
+  animation-delay: 3s;
+}
+
+@keyframes moveDown {
+  0% {
+    transform: translateY(-150%);
+  }
+  100% {
+    transform: translateY(150%);
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(-150%);
+  }
+}
+
+/* Меню */
+.menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  font-family: 'Press Start 2P', cursive;
+}
+
+#menu-toggle {
+  background: #a855f7;
+  border: none;
+  color: white;
+  font-size: 28px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #a855f7;
+  transition: background 0.3s;
+}
+
+#menu-toggle:hover {
+  background: #9333ea;
+}
+
+.menu-content {
+  display: none;
+  background: #1e1e2f;
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 12px;
+  max-width: 300px;
+  text-align: left;
+  box-shadow: 0 0 15px #a855f7;
+  color: #ddd;
+}
+
+.menu-content h2 {
+  margin-top: 0;
+}
+
+.menu-content button {
+  margin-top: 15px;
+  padding: 8px 16px;
+  background: #a855f7;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  width: 100%;
+}
+
+/* Контейнер с основным контентом */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+
+/* Заголовок PvPch */
+.logo-text {
+  font-size: 48px;
+  background: linear-gradient(45deg, #a855f7, #f43f5e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow:
+    0 0 8px #a855f7,
+    0 0 15px #f43f5e;
+  margin-bottom: 40px;
+}
+
+/* Сетка кнопок */
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 720px;
+  justify-items: center;
+}
+
+/* Кнопки */
+.minecraft-button {
+  padding: 15px;
+  font-size: 14px;
+  background: linear-gradient(to bottom right, #3b82f6, #6366f1);
+  border: 2px solid #0ff;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 15px #0ff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 200px;
+}
+
+.minecraft-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #0ff;
+}
+
+/* Социальные иконки */
+.social-icons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons img {
+  height: 32px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* Попапы */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.popup-content {
+  background: #1e1e2f;
+  padding: 25px;
+  border: 3px solid #a855f7;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 40px auto;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+  color: #ddd;
+}
+
+
+.popup-content button {
+  margin-top: 15px;
+  padding: 8px 16px;
+  background: #a855f7;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+/* Анимация появления попапов */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .logo-text {
+    font-size: 32px;
+    margin-bottom: 25px;
+  }
+
+  .button-grid {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    gap: 15px;
+  }
+
+  .minecraft-button {
+    max-width: 100%;
+    font-size: 12px;
+    padding: 12px;
+  }
+
+  .menu-content {
+    max-width: 90vw;
+    font-size: 12px;
+  }
+
+  .social-icons {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo-text {
+    font-size: 24px;
+  }
+
+  .minecraft-button {
+    font-size: 11px;
+    padding: 10px;
+  }
+}
